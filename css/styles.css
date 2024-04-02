@@ -4,14 +4,19 @@
     margin: 0;
 }
 
+#firstSection,#secondSection,#thirdSection{
+    position: relative;
+    margin:15px;
+}
+
 h1{
     text-align: center;
 }
 
 .design{
     background-color: lightcoral;
-    border-radius: 15px;
     padding: 25px;
+    border: 1px solid black;
 }
 
 .row{
@@ -33,9 +38,15 @@ h1{
 
 
 @media(min-width:768px) and (max-width:991px){
+    .row{
+        display:flex;
+        flex-wrap: wrap;
+    }
+
 
     .col-md-6{
-        width: 50%;
+        width: calc(50% - 30px);
+        /*O mais próximo que consigo é 49.7%*/
     }
 
     .col-md-12{
@@ -50,3 +61,15 @@ h1{
     }
 
 }
+
+.float-right{
+    border:1px solid black;
+    padding-left: 15px;
+    width:150px;
+    background-color:red;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
